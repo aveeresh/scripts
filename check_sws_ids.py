@@ -6,7 +6,7 @@ import os
 
 class Check_SWS_Ids:
 	
-	MAX_CELL_ROW = 150
+	MAX_CELL_ROW = 1000
 	SWS_COL      = 3
 	
 	def __init__(self, Module, PdfFileName, ExcelFileName):

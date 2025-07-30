@@ -4,7 +4,7 @@ import os
 
 class Check_Code_Tags:
     
-    MAX_CELL_ROW = 150
+    MAX_CELL_ROW = 1000
     SWS_COL      = 3
     IMPL_COL     = 5
     
