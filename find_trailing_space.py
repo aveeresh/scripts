@@ -9,14 +9,14 @@ for path, subdirs, files in os.walk(root):
 		if (file.endswith(".c")) or (file.endswith(".h")):
 			#print("Parsing %s" % (file) )
 			f_handle = open( os.path.join(path,file), "r" )
-            try:
-                lines = f_handle.readlines()
+			try:
+				lines = f_handle.readlines()
 			
-                for line in lines:
-                    #print(line)
-                    #print("End char = %s" % ("SPACE" if line[len(line)-2]==" " else "NOT SPACE"))
-                    if (line[len(line)-2]==" "):
-                        print( os.path.join(path,file) )
-                        break
-            except:
-                print("Cannot process file - %s" % (file))
+				for line in lines:
+					#print(line)
+					#print("End char = %s" % ("SPACE" if line[len(line)-2]==" " else "NOT SPACE"))
+					if (line[len(line)-2]==" "):
+						print( os.path.join(path,file) )
+						break
+			except:
+				print("Cannot process file - %s" % (file))
