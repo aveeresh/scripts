@@ -35,10 +35,11 @@ class SearchTabooWords:
                         for line in lines:
                             for word in TabooWordsList:
                                 if word in line:
-                                    FileName = os.path.join(path,file)
-                                    FileName = FileName.replace(self.SearchPath,"")
-                                    print("[E] Found [%s] in [%s] - Line No. [%d]" % (word, FileName, lines.index(line)))
-                                    break
+                                    if "/*" not in line and "*" not in line:
+                                        FileName = os.path.join(path,file)
+                                        FileName = FileName.replace(self.SearchPath,"")
+                                        print("[E] Found [%s] in [%s] - Line No. [%d]" % (word, FileName, lines.index(line)+1))
+                                        break
                     except:
                         print("Cannot process file - %s" % (file))
 
